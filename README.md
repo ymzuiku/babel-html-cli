@@ -6,8 +6,34 @@
 
 ## 安装
 
+1. 若网络条件好，可以直接使用 `npx babel-html-cli` 命令
+
+2. 由于内置了一部分babel，很容易和工程有冲突，建议安装到全局:
+
+```sh
+npm i -g babel-html-cli
 ```
+
+3. 若依赖没有冲突，可以安装到工程:
+
+```sh
 yarn add babel-html-cli -D
+```
+
+涉及依赖: 
+
+```json
+{
+  "dependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/runtime": "^7.7.6",
+    "@types/fs-extra": "^8.0.1",
+    "babel-preset-react-app": "^9.1.0",
+    "cheerio": "^1.0.0-rc.3",
+    "fs-extra": "^8.1.0"
+  }
+}
 ```
 
 ## 使用说明
@@ -15,13 +41,13 @@ yarn add babel-html-cli -D
 执行命令：
 
 ```
-npx babel-html public/index-es6.html public/index.html
+npx babel-html-cli public/index-es6.html public/index.html
 ```
 
 默认的 babel 配置使用 babel-react-app，亦可自定义 babel 配置：
 
 ```
-npx babel-html public/index-es6.html public/index.html --config .html-babelrc
+npx babel-html-cli public/index-es6.html public/index.html --config .html-babelrc
 ```
 
 ## 生产便捷转译
@@ -49,7 +75,7 @@ npx babel-html public/index-es6.html public/index.html --config .html-babelrc
 我们执行命令:
 
 ```sh
-NODE_ENV=production npx babel-html index-es6.html index.html
+NODE_ENV=production npx babel-html-cli index-es6.html index.html
 ```
 
 --> 编译后
@@ -104,7 +130,7 @@ package.json 脚本例子:
 ```json
 {
   "scripts": {
-    "html2es5":"babel-html public/index-es6.html public/index.html",
+    "html2es5":"npx babel-html-cli public/index-es6.html public/index.html",
     "start":"NODE_ENV=production yarn html2es5 && react-app-rewired start",
     "build":"NODE_ENV=production yarn html2es5 && react-app-rewired build",
   }

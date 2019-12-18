@@ -1,6 +1,6 @@
 {
   "name": "babel-html-cli",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "main": "index.js",
   "license": "MIT",
   "repository": "ymzuiku/babel-html-cli",
@@ -15,7 +15,7 @@
     "fs-extra": "^8.1.0"
   },
   "bin": {
-    "babel-html": "bin.js"
+    "babel-html-cli":"bin.js"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
