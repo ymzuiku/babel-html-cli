@@ -6,21 +6,21 @@
 
 ## 安装
 
-1. 若网络条件好，可以直接使用 `npx babel-html-cli` 命令
+**1.若网络条件好，可以直接使用 `npx babel-html-cli` 命令**
 
-2. 由于内置了一部分babel，很容易和工程有冲突，建议安装到全局:
+**2.由于内置了一部分babel，很容易和工程有冲突，建议安装到全局:**
 
 ```sh
 npm i -g babel-html-cli
 ```
 
-3. 若依赖没有冲突，可以安装到工程:
+**3.若依赖没有冲突，可以安装到工程:**
 
 ```sh
 yarn add babel-html-cli -D
 ```
 
-4. 若在持续集成环境不方便安装全局，建议可以将编译后的 index.html 提交到仓库中，不在编译流程中使用 babel-html-cli
+**4.若在持续集成环境不方便安装全局，建议可以将编译后的 index.html 提交到仓库中，不在编译流程中使用 babel-html-cli**
 
 涉及依赖: 
 
@@ -131,7 +131,7 @@ NODE_ENV=production npx babel-html-cli index-es6.html index.html
 </html>
 ```
 
-以上data属性，配合脚本 package.json 来切换工程的 index.html 内容。
+在开发中，我们可以使用以上data属性，配合脚本 package.json 来切换工程的 index.html 内容。
 
 package.json 脚本例子:
 
