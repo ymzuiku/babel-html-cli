@@ -1,0 +1,23 @@
+{
+  "name": "babel-html-cli",
+  "version": "0.1.1",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "ymzuiku/babel-html-cli",
+  "author": "pillar <ymblender@gmail.com>",
+  "dependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/runtime": "^7.7.6",
+    "@types/fs-extra": "^8.0.1",
+    "babel-preset-react-app": "^9.1.0",
+    "cheerio": "^1.0.0-rc.3",
+    "fs-extra": "^8.1.0"
+  },
+  "bin": {
+    "babel-html": "bin.js"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  }
+}

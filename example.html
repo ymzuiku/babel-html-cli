@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html data-scale lang="zh-cmn-Hans">
+  <head>
+    <title>babel-html</title>
+    <script id="node-env"></script>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.bootcss.com/core-js/2.6.9/core.min.js"></script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1,viewport-fit=cover"
+    />
+    <!-- test NodeEnv -->
+    <script data-babel-env="true"></script>
+    <script data-babel-remove="production">
+      console.log('test-remove-at-product')
+    </script>
+    <script data-babel-remove="development">
+      console.log('test-remove-at-development')
+    </script>
+    <script data-babel-remove="true">
+      console.log('test-remove')
+    </script>
+    <script data-babel-remove="false">
+      console.log('test-keep')
+    </script>
+    <!-- test babel -->
+    <script>
+      class Dog {
+        constructor(age){
+          this.name = 'big-dot'
+          this.age=age;
+          this.say();
+        }
+        say = ()=>{
+          console.log(this.name, this.age);
+        }
+      }
+      const dog = new Dog(10);
+      console.log(dog.age);
+    </script>
+    <script>
+      !(async function (){
+        console.log('hello-production');
+      const testFetch = async(event)=>{
+        return new Promise(res=>{
+          setTimeout(()=> res(event()), 2000);
+        })
+      }
+      await testFetch(()=>{
+        console.log('log at 2000ms ago');
+      })
+      })()
+    </script>
+    <script>
+      !(async function (){
+        console.log('hello-production');
+      const testFetch = async(event)=>{
+        return new Promise(res=>{
+          setTimeout(()=> res(event()), 2000);
+        })
+      }
+      await testFetch(()=>{
+        console.log('log at 2000ms ago');
+      })
+      })()
+    </script>
+    <!-- test import js -->
+    <script src="https://cdn.bootcss.com/lodash.js/4.17.15/lodash.core.min.js"></script>
+  </body>
+</html>
