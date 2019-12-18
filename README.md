@@ -2,13 +2,15 @@
 
 首先，由于 babel-runtime 的原因，为了控制 html 体积，我们不适合在 html 中编写涉及 babel-runtime 的方法，仅适合转译一些基础语法。
 
-## 使用说明
+该库提供了转译 html 中 script 脚本的 cli，并且可以对 script 脚本的data数据进行一定的编译处理，以辅助工程化相关行为。
 
-安装
+## 安装
 
 ```
 yarn add babel-html-cli -D
 ```
+
+## 使用说明
 
 执行命令：
 
