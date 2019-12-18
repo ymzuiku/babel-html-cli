@@ -124,7 +124,7 @@ NODE_ENV=production npx babel-html-cli index-es6.html index.html
 <html>
   <head>
     <script data-babel-remove="production" src="https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js"></script>
-    <script>
+    <script data-babel-remove="production">
       var vConsole = new VConsole();
     </script>
   </head>
