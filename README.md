@@ -1,4 +1,4 @@
-# babel-html
+# babel-html-cli
 
 首先，由于 babel-runtime 的原因，为了控制 html 体积，我们不适合在 html 中编写涉及 babel-runtime 的方法，仅适合转译一些基础语法。
 
