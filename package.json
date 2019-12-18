@@ -1,6 +1,6 @@
 {
   "name": "babel-html-cli",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "repository": "ymzuiku/babel-html-cli",

@@ -14,6 +14,10 @@ exports.cliHelper = argv => {
   };
 
   argv.forEach((v, i) => {
+    if (v === '--version') {
+      console.log(require('./package.json').name, require('./package.json').version);
+      process.exit(0);
+    }
     if (v === '--help') {
       console.log('--config ', 'Set bablerc to babel-html, defalut is .html-babelrc');
       console.log('--input  ', 'Set input html, example: public/index-es6.html');

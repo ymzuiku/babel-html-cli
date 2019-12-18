@@ -20,6 +20,8 @@ npm i -g babel-html-cli
 yarn add babel-html-cli -D
 ```
 
+4. 若在持续集成环境不方便安装全局，建议可以将编译后的 index.html 提交到仓库中，不在编译流程中使用 babel-html-cli
+
 涉及依赖: 
 
 ```json
@@ -38,13 +40,19 @@ yarn add babel-html-cli -D
 
 ## 使用说明
 
+查看帮助：
+
+```
+npx babel-html-cli --help
+```
+
 执行命令：
 
 ```
 npx babel-html-cli public/index-es6.html public/index.html
 ```
 
-默认的 babel 配置使用 babel-react-app，亦可自定义 babel 配置：
+默认的 babel 配置使用 babel-react-app，亦可自定义 babel 配置, 添加 --config 参数：
 
 ```
 npx babel-html-cli public/index-es6.html public/index.html --config .html-babelrc
