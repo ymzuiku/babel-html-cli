@@ -139,7 +139,7 @@ package.json 脚本例子:
 {
   "scripts": {
     "html2es5":"npx babel-html-cli public/index-es6.html public/index.html",
-    "start":"NODE_ENV=production yarn html2es5 && react-app-rewired start",
+    "start":"NODE_ENV=development yarn html2es5 && react-app-rewired start",
     "build":"NODE_ENV=production yarn html2es5 && react-app-rewired build",
   }
 }
