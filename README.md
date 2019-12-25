@@ -113,10 +113,11 @@ NODE_ENV=production npx babel-html-cli index-es6.html index.html
 
 类似的 data 属性还有：
 
-- data-babel-env="true"
+- data-babel-env="true" 
 - data-babel-remove="production"
 - data-babel-remove="development"
 - data-babel-remove="true"
+- data-babel-keep="true" 不进行 babel 转译
 
 其中 data-babel-remove 会根据 NODE_ENV 和其环境变量的值判断是否删除 script 脚本, 常用例子:
 

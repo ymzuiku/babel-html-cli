@@ -24,6 +24,20 @@
       console.log('test-keep')
     </script>
     <!-- test babel -->
+    <script data-babel-keep="true">
+      class Keep {
+        constructor(age){
+          this.name = 'big-dot'
+          this.age=age;
+          this.say();
+        }
+        say = ()=>{
+          console.log(this.name, this.age);
+        }
+      }
+      const dog = new Dog(10);
+      console.log(dog.age);
+    </script>
     <script>
       class Dog {
         constructor(age){

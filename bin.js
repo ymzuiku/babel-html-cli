@@ -54,6 +54,10 @@ $('script').each(function(index, xml) {
     $(xml).remove();
   }
   if (ctx) {
+    if (xml.attribs['data-babel-keep'] === 'true') {
+      return;
+    }
+
     // remove at development or at production
     if (process.env.NODE_ENV !== 'development') {
       ctx = ctx.replace(`return 'at-development';`, '');
